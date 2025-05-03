@@ -6,7 +6,7 @@ A Python library for extracting hidden numbers from Ishihara color blindness tes
 
 This project implements the K-means clustering algorithm from scratch and applies it to extract numbers from Ishihara color blindness test images. The implementation leverages different color spaces (RGB, HSV, Lab, YCrCb) to optimize number extraction based on the specific properties of Ishihara tests.
 
-![Example Result](docs/example_result.jpg)
+![Example Result](examples/Figure_1.png)
 
 ## Features
 
