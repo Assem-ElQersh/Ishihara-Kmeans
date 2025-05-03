@@ -6,7 +6,7 @@ A Python library for extracting hidden numbers from Ishihara color blindness tes
 
 This project implements the K-means clustering algorithm from scratch and applies it to extract numbers from Ishihara color blindness test images. The implementation leverages different color spaces (RGB, HSV, Lab, YCrCb) to optimize number extraction based on the specific properties of Ishihara tests.
 
-![Example Result](docs/example_result.png)
+![Example Result](docs/example_result.jpg)
 
 ## Features
 
@@ -38,7 +38,7 @@ from src.image_processing import preprocess_image, segment_image, extract_number
 import matplotlib.pyplot as plt
 
 # Load and preprocess image using Lab color space, a-channel
-image_rgb, features, _ = preprocess_image("data/ishihara_74.png", 'lab', 1)
+image_rgb, features, _ = preprocess_image("data/74.jpg", 'lab', 1)
 
 # Apply K-means clustering with 2 clusters
 kmeans = KMeansClustering(k=2, max_iterations=100)
@@ -73,13 +73,13 @@ plt.show()
 
 ```bash
 # Basic usage with default parameters (Lab color space, a-channel, k=2)
-python -m src.cli data/ishihara_74.png
+python -m src.cli data/74.jpg
 
 # Try different color spaces and parameters
-python -m src.cli data/ishihara_74.png --color-space lab --channel 1 --k 2
+python -m src.cli data/74.jpg --color-space lab --channel 1 --k 2
 
 # Optimize parameters automatically
-python -m src.cli data/ishihara_74.png --optimize
+python -m src.cli data/74.jpg --optimize
 ```
 
 ## Project Structure
